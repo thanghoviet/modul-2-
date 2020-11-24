@@ -14,4 +14,5 @@ public class Main {
         float area = width * heigth;
         System.out.println("Area : " + area );
     }
+
 }
