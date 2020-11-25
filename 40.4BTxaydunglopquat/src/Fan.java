@@ -32,6 +32,7 @@ public class Fan {
         this.on = on;
     }
 
+
     public double getRadius() {
         return radius;
     }

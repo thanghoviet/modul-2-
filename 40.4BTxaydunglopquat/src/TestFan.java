@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TestFan {
     public static void main(String[] args) {
         Fan testfan1 = new Fan();
@@ -8,6 +10,7 @@ public class TestFan {
 
         Fan fan2 = new Fan();
         fan2.setSpeed(Fan.medium);
+
     }
 }
 
