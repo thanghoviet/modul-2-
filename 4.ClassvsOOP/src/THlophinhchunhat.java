@@ -1,8 +1,12 @@
 import java.util.Scanner;
 
 public class THlophinhchunhat {
+    public static void main(String[] args) {
 
+    }
     double width, height;
+    Scanner scanner = new Scanner(System.in);
+
 
     public THlophinhchunhat() {
     }
