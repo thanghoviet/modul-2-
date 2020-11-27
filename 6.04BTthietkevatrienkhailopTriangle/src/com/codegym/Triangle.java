@@ -1,9 +1,9 @@
 package com.codegym;
 
 public class Triangle {
-    public double side1 = 1.0;
-    public double side2 = 1.0;
-    public double side3 = 1.0;
+    public double side1 = 5.0;
+    public double side2 = 5.0;
+    public double side3 = 5.0;
 
     public Triangle(int i, int i1, int i2, String blue) {
 
@@ -40,9 +40,10 @@ public class Triangle {
     }
 
     public double getArea() {
-        return Math.sqrt(((side1+side2+side3)*(side1+side2-side3)*(side2+side3-side1)*(side3+side1-side2))/4);
+        return Math.sqrt(((side1 + side2 + side3) * (side1 + side2 - side3) * (side2 + side3 - side1) * (side3 + side1 - side2)) / 4);
     }
-    public double getPerimeter(){
+
+    public double getPerimeter() {
         return this.side3 + this.side2 + this.side1;
     }
 
