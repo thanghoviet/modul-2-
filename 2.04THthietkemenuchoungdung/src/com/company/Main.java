@@ -12,13 +12,13 @@ public class Main {
         System.out.println("2. Draw the square");
         System.out.println("3. Draw the rectangle");
         System.out.println("0. Exit");
-        System.out.println("Enter your choice: ");
+        System.out.println("Nhap lua chon cua ban:  ");
         choice = input.nextInt();
 
         while(choice!= 0) {
 
 
-        switch (choice) {
+            switch (choice) {
             case 1:
                 System.out.println("Draw the triangle");
                 System.out.println("******");
