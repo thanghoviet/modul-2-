@@ -8,7 +8,7 @@ public class TriangleClassifier {
         if (isIsoscelesTriangle(edge1, edge2, edge3))
             return "la tam giac can";
 
-        return "la tam giac thuong";
+        return "2";
 
     }
 
