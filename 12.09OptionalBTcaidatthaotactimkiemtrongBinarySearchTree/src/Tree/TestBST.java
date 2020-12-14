@@ -1,9 +1,9 @@
-package com.codegym;
+package Tree;
 
-public class testBST {
+public class TestBST<E> {
     public static void main(String[] args) {
         //create a BST
-        BST<String> tree = new BST<>();
+        SearchTree<String> tree = new SearchTree<>();
         tree.insert("George");
         tree.insert("Michael");
         tree.insert("Tom");
@@ -11,11 +11,12 @@ public class testBST {
         tree.insert("Jones");
         tree.insert("Peter");
         tree.insert("Daniel");
-
         //traverse tree
-        System.out.println("Inorder (sorted): ");
-        tree.inorder();
+        System.out.println("Inorder: ");
+        tree.inorderTraversal();
         System.out.println("The number of nodes is: " + tree.getSize());
-
+        tree.printTree();
+        System.out.println("Searching Adam: " + tree.contains("Adam"));
+        System.out.println("Searching Adam1: " + tree.contains("Adam1"));
     }
 }

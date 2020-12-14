@@ -7,9 +7,7 @@ public class BankAccount {
     private String name;
     private int monney;
 
-    public BankAccount() {
-
-    }
+    public BankAccount() {}
 
     public BankAccount(String name, int monney) {
         this.name = name;
@@ -31,11 +29,13 @@ public class BankAccount {
         lichSu.add("Nap tien: " + ruttien);
     }
 
-    public void historyAccount() {
+    public ArrayList<String> historyAccount() {
         int limit = Math.max(lichSu.size() - 3, 0);
+        ArrayList<String> result = new ArrayList<>();
         for (int i = lichSu.size() - 1; i >= limit; i--) {
-            System.out.println(lichSu.get(i));
+            result.add(lichSu.get(i));
         }
+        return result;
     }
 
 

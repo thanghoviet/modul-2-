@@ -8,12 +8,11 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     }
 
     public BST(E[] objects) {
-        for (int i = 0; i < objects.length; i++)
-            insert(objects[i]);
+        for (E object : objects) insert(object);
     }
 
     @Override
-    public boolean insert(E e) {
+    public void insert(E e) {
         TreeNode<E> newNode = new TreeNode<>(e);
         if (root == null)
             root = newNode;// * tạo một root mới * //
@@ -24,7 +23,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
             while (current != null) {
                 int compareResult = e.compareTo(current.element);
                 if (compareResult == 0)
-                    return false; // * Chưa chèn nút trùng lặp * /
+                    return; // * Chưa chèn nút trùng lặp * /
 
                 parent = current;
                 if (compareResult < 0) {
@@ -40,7 +39,6 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
                 parent.right = newNode;
         }
         size++;
-        return true; // * phần tử được chèn thành công * /
     }
 
     protected TreeNode<E> createNewNode(E e) {

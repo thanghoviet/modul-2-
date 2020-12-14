@@ -8,11 +8,4 @@ public class TreeNode<E> {
     public TreeNode(E e){
         element=e;
     }
-    @Override
-    public String toString() {
-        return "element=" + element +
-                ", left=" + left +
-                ", right=" + right +
-                '|';
-    }
 }

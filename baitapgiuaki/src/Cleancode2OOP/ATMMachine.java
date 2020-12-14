@@ -1,5 +1,6 @@
 package Cleancode2OOP;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ATMMachine {
@@ -51,7 +52,14 @@ public class ATMMachine {
 
     public void History() {
         System.out.println("lich su 3 lan hoat dong truoc");
-        abcBank.historyAccount();
+        ArrayList<String> arr = abcBank.historyAccount();
+        if (arr.isEmpty()) {
+            System.out.println("chua co lich su giao dich");
+            return;
+        }
+        for (String history : arr) {
+            System.out.println(history);
+        }
     }
 
 
