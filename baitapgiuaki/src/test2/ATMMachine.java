@@ -1,14 +1,12 @@
-package check;
+package test2;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CheckYourMoney {
-    User abcBank = new User("Nguyen van A", 120000);
-    ArrayList<String> lichSu = new ArrayList<>();
+public class ATMMachine {
+    BankAccount abcBank = new BankAccount("Nguyen van A", 120000);
     Scanner scanner = new Scanner(System.in);
 
-    public void Menu(){
+    public void Menu() {
         System.out.println("==============");
         System.out.println("Menu");
         System.out.println("Nhan phim 1 de kiem tra tai khoan");
@@ -30,8 +28,7 @@ public class CheckYourMoney {
         System.out.println("Giao dich Nap tien : ");
         System.out.println("Vui long nhap so tien:");
         int naptien = scanner.nextInt();
-        abcBank.setMoney(abcBank.getMoney() + naptien);
-        lichSu.add("Nap tien: " + naptien);
+        abcBank.setMoneyadd(naptien);
         System.out.println("Giao dich thanh cong. Ban vua nap " + naptien + "thanh cong.");
         System.out.println("So du tai khoan khach hang la:" + abcBank.getMoney() + "VND");
         System.out.println("Bam nut theo menu de tiep tuc giao dich");
@@ -42,8 +39,7 @@ public class CheckYourMoney {
         System.out.println("Vui long nhap so tien:");
         int ruttien = scanner.nextInt();
         if (ruttien <= abcBank.getMoney()) {
-            abcBank.setMoney(abcBank.getMoney() - ruttien);
-            lichSu.add("Rut tien: " + ruttien);
+            abcBank.setMoneyclear(ruttien);
             System.out.println("Giao dich thanh cong. Ban vua rut" + ruttien + "thanh cong.");
             System.out.println("So du tai khoan khach hang la:" + abcBank.getMoney() + "VND");
             System.out.println("Bam nut theo menu de tiep tuc giao dich");
@@ -55,10 +51,8 @@ public class CheckYourMoney {
 
     public void History() {
         System.out.println("lich su 3 lan hoat dong truoc");
-        int limit = Math.max(lichSu.size() - 3, 0);
-        for (int i = lichSu.size() - 1; i >= limit; i--) {
-            System.out.println(lichSu.get(i));
-        }
+        abcBank.historyAccount();
     }
+
 
 }

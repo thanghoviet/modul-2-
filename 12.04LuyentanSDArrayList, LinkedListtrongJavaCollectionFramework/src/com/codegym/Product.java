@@ -4,6 +4,9 @@ public class Product {
     private String name;
     private int id;
     private int price;
+
+
+
     public Product(){
 
     }
@@ -35,5 +38,13 @@ public class Product {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+    @Override
+    public String toString() {
+        return "\n Product: \n " +
+                "name:'" + name + '\'' +
+                ", id:" + id +
+                ", price:" + price
+                ;
     }
 }
