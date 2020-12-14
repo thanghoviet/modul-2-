@@ -1,4 +1,4 @@
-package check;
+package CleancodeOOP;
 
 import java.util.ArrayList;
 import java.util.Scanner;

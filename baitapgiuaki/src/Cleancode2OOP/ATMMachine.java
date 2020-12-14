@@ -1,4 +1,4 @@
-package test2;
+package Cleancode2OOP;
 
 import java.util.Scanner;
 

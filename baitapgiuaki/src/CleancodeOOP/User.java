@@ -1,4 +1,4 @@
-package check;
+package CleancodeOOP;
 
 public class User {
     private String name;

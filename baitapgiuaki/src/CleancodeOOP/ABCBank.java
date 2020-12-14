@@ -1,26 +1,25 @@
-package test2;
+package CleancodeOOP;
 
-import check.CheckYourMoney;
 
 import java.util.Scanner;
 
-public class ATMMachineTest {
+public class ABCBank {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CheckYourMoney check = new CheckYourMoney();
+        CheckYourMoney check= new CheckYourMoney();
         String name = "Nguyen Van A";
         int monney = 1200000;
         int choice;
         do {
-            check.Menu();
-            choice = scanner.nextInt();
+        check.Menu();
+        choice = scanner.nextInt();
             switch (choice) {
                 case 1:
                     check.CheckMonney();
                     break;
                 case 2:
-                    check.Payment();
+                    check.Payment ();
                     break;
                 case 3:
                     check.Withdrawal();
@@ -37,4 +36,6 @@ public class ATMMachineTest {
         } while (choice != 0);
     }
 }
+
+
 
