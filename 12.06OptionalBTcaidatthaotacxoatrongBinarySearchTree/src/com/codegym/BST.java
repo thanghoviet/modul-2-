@@ -65,33 +65,40 @@ public class BST<E extends Comparable<E>> {
                 current = current.right;
             }
         }
-        if (current.left==null){
-            if (elements.compareTo(parent.element)<0){
-                parent.left=current.right;
+        if (current.left == null) {
+            if (elements.compareTo(parent.element) < 0) {
+                parent.left = current.right;
             }
-            parent.right=current.right;
-        }else {
-                NodeHasLeftNode(parent,current);
+            parent.right = current.right;
+        } else {
+            NodeHasLeftNode(parent, current);
         }
     }
 
-    public void NodeHasLeftNode(TreeNode<E> fatherRemove,TreeNode<E> remove){
-        TreeNode<E> newFather=remove;
-        TreeNode<E> rightMost=remove.left;
-        while (rightMost.right!=null){
-            newFather=rightMost;
-            rightMost=rightMost.right;
+    public void NodeHasLeftNode(TreeNode<E> fatherRemove, TreeNode<E> remove) {
+        TreeNode<E> newFather = remove;
+        TreeNode<E> rightMost = remove.left;
+        while (rightMost.right != null) {
+            newFather = rightMost;
+            rightMost = rightMost.right;
         }
-        remove=rightMost;
-        if (rightMost.right!=null) {
+        remove.element = rightMost.element;
+        if (newFather==remove) {
+            newFather.left= rightMost.left;
+        } else {
             newFather.right = rightMost.left;
-        }else {
-            newFather.left = rightMost.left;
         }
     }
+    public void inorder() {
+        inorderRecursion(root);
+    }
+    protected void inorderRecursion(TreeNode<E> current) {
+        if (current == null) {
+            return;
+        }
+        inorderRecursion(current.left);
+        System.out.println(current.element + " ");
+        inorderRecursion(current.right);
 
-    public void printTree(){
-
-        System.out.println(root);
     }
 }
