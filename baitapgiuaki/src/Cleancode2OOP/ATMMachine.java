@@ -10,11 +10,11 @@ public class ATMMachine {
     public void Menu() {
         System.out.println("==============");
         System.out.println("Menu");
-        System.out.println("Nhan phim 1 de kiem tra tai khoan");
-        System.out.println("Nhan phim 2 de nap tien");
-        System.out.println("Nhan phim 3 de rut tien");
-        System.out.println("Nhan phim 4 de xem lich su 3 lan");
-        System.out.println("Nhan phim 0 de thoat");
+        System.out.println("Nhan phim A de kiem tra tai khoan");
+        System.out.println("Nhan phim B de nap tien");
+        System.out.println("Nhan phim C de rut tien");
+        System.out.println("Nhan phim D de xem lich su 3 lan");
+        System.out.println("Nhan phim X de thoat");
         System.out.println("Nhap lua chon cua ban:  ");
 
     }

@@ -11,30 +11,30 @@ public class ATMMachineTest {
         CheckYourMoney check = new CheckYourMoney();
         String name = "Nguyen Van A";
         int monney = 1200000;
-        int choice;
+        String choice;
         do {
             check.Menu();
-            choice = scanner.nextInt();
+            choice = scanner.nextLine();
             switch (choice) {
-                case 1:
+                case "A":
                     check.CheckMonney();
                     break;
-                case 2:
+                case "B":
                     check.Payment();
                     break;
-                case 3:
+                case "C":
                     check.Withdrawal();
                     break;
-                case 4:
+                case "D":
                     check.History();
                     break;
-                case 0:
+                case "X":
                     System.exit(0);
                 default:
                     System.out.println("Ban nhap sai chuc nang" +
                             "Bam nut theo menu de tiep tuc giao dich");
             }
-        } while (choice != 0);
+        } while (true);
     }
 }
 
